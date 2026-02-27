@@ -11,10 +11,4 @@ async function fetchData() {
     catch (error) {
       console.error('Fetch Error: ', error);
     }
-  }
-  
-  const fetchProduct = fetchData();
-
-const productsBox = document.querySelector(".products");
-
-productsBox.appendChild(fetchProduct);
+}
