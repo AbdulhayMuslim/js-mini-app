@@ -12,7 +12,7 @@ async function fetchData() {
           <h3>${product.title}</h3>
           <img src="${product.image}" width="100">
           <p>Price: $${product.price}</p>
-          <button><i class="fa-solid fa-heart"></i></button>
+          <button class="favbtn"><i class="fa-solid fa-heart"></i></button>
         </div>
       `).join('');
 
@@ -26,3 +26,10 @@ async function fetchData() {
 }
 
 fetchData();
+
+document.addEventListener("click", function (e) {
+  if (e.target.closest(".favbtn")) {
+    const button = e.target.closest(".favbtn");
+    button.classList.toggle("active");
+  }
+});
