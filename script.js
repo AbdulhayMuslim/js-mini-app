@@ -31,13 +31,5 @@ document.addEventListener("click", function (e) {
   if (e.target.closest(".favbtn")) {
     const button = e.target.closest(".favbtn");
     button.classList.toggle("active");
-    const favProducts = [];
-    favProducts.push(product);
-    console.log(favProducts);
   }
-});
-
-const favCatBtn = document.getElementById("favcategory");
-favCatBtn.addEventListener("click", () => {
-  //should display fovorite icons only
 });
